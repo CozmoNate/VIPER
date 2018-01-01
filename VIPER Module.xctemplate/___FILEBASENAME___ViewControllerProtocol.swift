@@ -11,7 +11,7 @@ import Foundation
 
 protocol ___FILEBASENAMEASIDENTIFIER___: class {
 
-    var module: ___VARIABLE_productName:identifier___ModuleProtocol? { get set }
+    var anchor: AnyObject? { get set }
     
     weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate? { get set }
     

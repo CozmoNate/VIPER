@@ -12,7 +12,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
 
-    var module: ___VARIABLE_productName:identifier___ModuleProtocol?
+    var anchor: AnyObject?
     
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
 

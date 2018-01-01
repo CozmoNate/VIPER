@@ -25,6 +25,8 @@ protocol ___FILEBASENAMEASIDENTIFIER___: class {
 protocol ___VARIABLE_productName:identifier___ModuleDelegate: class {
     
     func ___VARIABLE_viperFuncPrefix___ModuleWillStart(_ module: ___VARIABLE_productName:identifier___ModuleProtocol)
+    func ___VARIABLE_viperFuncPrefix___ModuleDidStart(_ module: ___VARIABLE_productName:identifier___ModuleProtocol)
+    func ___VARIABLE_viperFuncPrefix___ModuleWillFinish(_ module: ___VARIABLE_productName:identifier___ModuleProtocol)
     func ___VARIABLE_viperFuncPrefix___ModuleDidFinish(_ module: ___VARIABLE_productName:identifier___ModuleProtocol)
     
 }

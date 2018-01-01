@@ -46,7 +46,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___Modul
         }
         
         rootViewController = viewController
-        rootViewController.module = self
+        rootViewController.anchor = self
         rootViewController.delegate = presenter
         
         presenter.viewControler = viewController
@@ -62,7 +62,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___Modul
     }
     
     private func dispose() {
-        rootViewController.module = nil
+        rootViewController.anchor = nil
     }
     
     func closeView(animated: Bool) {
