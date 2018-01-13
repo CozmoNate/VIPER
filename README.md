@@ -1,4 +1,4 @@
-# VIPER Module
+# VIPER Container
 
 ## Installation:
 
