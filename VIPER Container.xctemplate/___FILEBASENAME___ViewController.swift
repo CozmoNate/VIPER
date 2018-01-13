@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 
-class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
+class ___VARIABLE_productName:identifier___ViewController: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
 
-    var anchor: AnyObject?
+    var container: ___VARIABLE_productName:identifier___ContainerProtocol?
     
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
 

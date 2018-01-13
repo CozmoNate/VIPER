@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol ___FILEBASENAMEASIDENTIFIER___: class {
+protocol ___VARIABLE_productName:identifier___InteractorProtocol: class {
 
     weak var presenter: ___VARIABLE_productName:identifier___PresenterProtocol? { get set }
     

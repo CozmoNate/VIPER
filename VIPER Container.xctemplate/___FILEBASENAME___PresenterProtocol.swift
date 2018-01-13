@@ -9,9 +9,9 @@
 import Foundation
 
 
-protocol ___FILEBASENAMEASIDENTIFIER___: class {
+protocol ___VARIABLE_productName:identifier___PresenterProtocol: class {
 
-    weak var wireframe: ___VARIABLE_productName:identifier___ModuleProtocol? { get set }
+    weak var container: ___VARIABLE_productName:identifier___ContainerProtocol? { get set }
     weak var interactor: ___VARIABLE_productName:identifier___InteractorProtocol? { get set }
     weak var viewControler: ___VARIABLE_productName:identifier___ViewControllerProtocol? { get set }
     

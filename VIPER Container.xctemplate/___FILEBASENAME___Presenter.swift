@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 
-class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___PresenterProtocol, ___VARIABLE_productName:identifier___ViewControllerDelegate {
+class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol, ___VARIABLE_productName:identifier___ViewControllerDelegate {
 
-    weak var wireframe: ___VARIABLE_productName:identifier___ModuleProtocol?
+    weak var container: ___VARIABLE_productName:identifier___ContainerProtocol?
     weak var interactor: ___VARIABLE_productName:identifier___InteractorProtocol?
     weak var viewControler: ___VARIABLE_productName:identifier___ViewControllerProtocol?
 
@@ -26,7 +26,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___Prese
 
     func viewDidClose() {
         
-        wireframe?.closeView(animated: false)
+        container?.dismissViewController(animated: false)
         
     }
 }

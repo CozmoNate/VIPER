@@ -9,9 +9,9 @@
 import Foundation
 
 
-protocol ___FILEBASENAMEASIDENTIFIER___: class {
+protocol ___VARIABLE_productName:identifier___ViewControllerProtocol: class {
 
-    var anchor: AnyObject? { get set }
+    var container: ___VARIABLE_productName:identifier___ContainerProtocol? { get set }
     
     weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate? { get set }
     
