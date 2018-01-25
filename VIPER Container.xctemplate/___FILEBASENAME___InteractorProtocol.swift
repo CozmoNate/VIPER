@@ -13,5 +13,7 @@ protocol ___VARIABLE_productName:identifier___InteractorProtocol: class {
 
     weak var presenter: ___VARIABLE_productName:identifier___PresenterProtocol? { get set }
     
+    // Interactor methods utilized by presenter
+    
 }
 

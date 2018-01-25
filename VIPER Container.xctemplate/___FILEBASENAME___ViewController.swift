@@ -12,25 +12,33 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
 
-    var container: ___VARIABLE_productName:identifier___ContainerProtocol?
-    
+    var container:  ___VARIABLE_productName:identifier___ContainerProtocol?
+
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
 
     // MARK: - UIViewController
     
     override func viewDidLoad() {
-        super.viewDidLoad();
-        
+        super.viewDidLoad()
+
         delegate?.viewDidLoad()
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if self.isBeingDismissed || self.isMovingFromParentViewController {
+        if isBeingDismissed || isMovingFromParentViewController {
             delegate?.viewDidClose()
         }
+        // Check root view controller being dismissed
+        else if let r = container?.rootViewController, r.isBeingDismissed || r.isMovingFromParentViewController {
+            delegate?.viewDidClose()
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
 }

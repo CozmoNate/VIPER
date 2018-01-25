@@ -10,23 +10,29 @@ import Foundation
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol, ___VARIABLE_productName:identifier___ViewControllerDelegate {
+class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol {
 
-    weak var container: ___VARIABLE_productName:identifier___ContainerProtocol?
+    weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate?
+
     weak var interactor: ___VARIABLE_productName:identifier___InteractorProtocol?
     weak var viewControler: ___VARIABLE_productName:identifier___ViewControllerProtocol?
 
     func reloadData() {
-        
+        // Update view controller
     }
     
-    func viewDidLoad() {
-        // Update presentation
-    }
+    // Presenter methods used by interactor
+    
+}
 
-    func viewDidClose() {
-        
-        container?.dismissViewController(animated: false)
-        
+extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___ViewControllerDelegate {
+    
+    func viewDidLoad() {
+        reloadData() // Reload data the first time
     }
+    
+    func viewDidClose() {
+        delegate?.didClose() // View controller dismissed
+    }
+    
 }

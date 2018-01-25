@@ -11,14 +11,8 @@ import UIKit
 
 
 protocol ___VARIABLE_productName:identifier___ContainerProtocol: class {
-
-    var willStartHandler: (() -> Void)? { get set }
-    var didStartHandler: (() -> Void)? { get set }
-    var willFinishHandler: (() -> Void)? { get set }
-    var didFinishHandler: (() -> Void)? { get set }
     
-    func presentViewController(from presentingViewController: UIViewController, animated: Bool) -> UIViewController?
-    func dismissViewController(animated: Bool)
+    var rootViewController: UIViewController? { get }
     
 }
 
