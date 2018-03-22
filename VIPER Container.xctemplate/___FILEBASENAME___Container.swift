@@ -28,7 +28,7 @@ class ___VARIABLE_productName:identifier___Container: ___VARIABLE_productName:id
         //super.init() // In case of subclassing NSObject
         
         // Interactor setup
-        interactor.presenter = presenter
+        interactor.delegate = presenter
 
         // Presenter setup
         presenter.delegate = self
@@ -44,6 +44,8 @@ class ___VARIABLE_productName:identifier___Container: ___VARIABLE_productName:id
             viewController = storyboardController
             viewController?.container = self
             viewController?.delegate = presenter
+            
+            presenter.viewController = viewController
 
             rootViewController = UINavigationController(rootViewController: storyboardController)
          }

@@ -9,11 +9,20 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___InteractorProtocol: class {
+protocol ___VARIABLE_productName:identifier___InteractorProtocol: ___VARIABLE_productName:identifier___InteractorActions {
 
-    weak var presenter: ___VARIABLE_productName:identifier___PresenterProtocol? { get set }
+    weak var delegate: ___VARIABLE_productName:identifier___InteractorDelegate? { get set }
+    
+}
+
+protocol ___VARIABLE_productName:identifier___InteractorActions: class {
     
     // Interactor methods utilized by presenter
     
 }
 
+protocol ___VARIABLE_productName:identifier___InteractorDelegate: class {
+    
+    // Interactor events utilized by presenter
+    
+}

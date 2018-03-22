@@ -9,11 +9,15 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___ViewControllerProtocol: class {
+protocol ___VARIABLE_productName:identifier___ViewControllerProtocol: ___VARIABLE_productName:identifier___ViewControllerActions {
 
     var container:  ___VARIABLE_productName:identifier___ContainerProtocol? { get set }
 
     weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate? { get set }
+    
+}
+
+protocol ___VARIABLE_productName:identifier___ViewControllerActions: class {
     
     // View controller methods updating views and utilized by presenter
     
@@ -27,6 +31,4 @@ protocol ___VARIABLE_productName:identifier___ViewControllerDelegate: class {
     /// ViewController dismissed
     func viewDidClose()
 
-    // View controller events and actions
-    
 }
