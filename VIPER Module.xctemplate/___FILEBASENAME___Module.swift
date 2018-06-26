@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___Container: ___VARIABLE_productName:identifier___ContainerProtocol {
+class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___ModuleProtocol {
     
     var completionHandler: (() -> Void)?
     
@@ -52,7 +52,7 @@ class ___VARIABLE_productName:identifier___Container: ___VARIABLE_productName:id
     }
 }
 
-extension ___VARIABLE_productName:identifier___Container: ___VARIABLE_productName:identifier___PresenterDelegate {
+extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___PresenterDelegate {
 
     func didClose() {
         completionHandler?()

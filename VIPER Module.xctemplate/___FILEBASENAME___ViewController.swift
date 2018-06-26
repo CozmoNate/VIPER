@@ -12,7 +12,7 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
 
-    var container:  ___VARIABLE_productName:identifier___ContainerProtocol?
+    var container:  ___VARIABLE_productName:identifier___ModuleProtocol?
 
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
 

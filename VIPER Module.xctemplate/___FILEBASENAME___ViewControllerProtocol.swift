@@ -11,7 +11,7 @@ import Foundation
 
 protocol ___VARIABLE_productName:identifier___ViewControllerProtocol: ___VARIABLE_productName:identifier___ViewControllerActions {
 
-    var container:  ___VARIABLE_productName:identifier___ContainerProtocol? { get set }
+    var container:  ___VARIABLE_productName:identifier___ModuleProtocol? { get set }
 
     weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate? { get set }
     
