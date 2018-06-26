@@ -15,7 +15,7 @@ class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:id
     weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate?
 
     weak var interactor: ___VARIABLE_productName:identifier___InteractorActions?
-    weak var viewControler: ___VARIABLE_productName:identifier___ViewControllerAction?
+    weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions?
 
     func reloadData() {
         // Update view controller

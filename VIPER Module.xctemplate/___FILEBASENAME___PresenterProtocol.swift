@@ -14,7 +14,7 @@ protocol ___VARIABLE_productName:identifier___PresenterProtocol: ___VARIABLE_pro
     weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate? { get set }
 
     weak var interactor: ___VARIABLE_productName:identifier___InteractorActions? { get set }
-    weak var viewControler: ___VARIABLE_productName:identifier___ViewControllerActions? { get set }
+    weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions? { get set }
     
 }
 

@@ -39,8 +39,6 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         
          if let storyboardController = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_productName:identifier___") as? ___VARIABLE_productName:identifier___ViewController {
             
-            presenter.viewControler = storyboardController
-            
             viewController = storyboardController
             viewController?.container = self
             viewController?.delegate = presenter
