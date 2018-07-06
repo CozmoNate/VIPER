@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___ViewController: UIViewController, ___VARIABLE_productName:identifier___ViewControllerProtocol {
-
-    var container:  ___VARIABLE_productName:identifier___ModuleProtocol?
+class ___VARIABLE_productName:identifier___ViewController {
 
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
+    
+    var container:  ___VARIABLE_productName:identifier___Container?
 
     // MARK: - UIViewController
     

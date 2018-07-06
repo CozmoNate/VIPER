@@ -9,15 +9,6 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___PresenterProtocol {
-
-    weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate? { get set }
-
-    weak var interactor: ___VARIABLE_productName:identifier___InteractorActions? { get set }
-    weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions? { get set }
-    
-}
-
 protocol ___VARIABLE_productName:identifier___PresenterActions: class {
     
     func reloadData()

@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol {
+class ___VARIABLE_productName:identifier___Presenter {
 
     weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate?
-
+    weak var dataSource: ___VARIABLE_productName:identifier___DataSource?
     weak var interactor: ___VARIABLE_productName:identifier___InteractorActions?
     weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions?
 

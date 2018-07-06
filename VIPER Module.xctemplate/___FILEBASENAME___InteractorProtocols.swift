@@ -9,11 +9,12 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___InteractorProtocol {
-
-    weak var delegate: ___VARIABLE_productName:identifier___InteractorDelegate? { get set }
+protocol ___VARIABLE_productName:identifier___DataSource: class {
+    
+    // Data provider methods utilized by presenter
     
 }
+
 
 protocol ___VARIABLE_productName:identifier___InteractorActions: class {
     

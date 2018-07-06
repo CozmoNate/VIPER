@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___ModuleProtocol {
+class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Container {
     
     var rootViewController: UIViewController? {
         return viewController
@@ -33,6 +33,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
 
         // Presenter setup
         presenter.delegate = self
+        presenter.dataSource = interactor
         presenter.interactor = interactor
         
         // View controller setup

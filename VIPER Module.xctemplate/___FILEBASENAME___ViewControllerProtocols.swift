@@ -9,14 +9,6 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___ViewControllerProtocol {
-
-    weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate? { get set }
-    
-    var container:  ___VARIABLE_productName:identifier___ModuleProtocol? { get set }
-    
-}
-
 protocol ___VARIABLE_productName:identifier___ViewControllerActions: class {
     
     // View controller methods updating views and utilized by presenter
