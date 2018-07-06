@@ -11,13 +11,14 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___ModuleProtocol {
     
-    var completionHandler: (() -> Void)?
+    var rootViewController: UIViewController? {
+        return viewController
+    }
     
-    var interactor: ___VARIABLE_productName:identifier___Interactor
-    var presenter: ___VARIABLE_productName:identifier___Presenter
-
-    var viewController: ___VARIABLE_productName:identifier___ViewController?
-    var rootViewController: UIViewController?
+    private var interactor: ___VARIABLE_productName:identifier___Interactor
+    private var presenter: ___VARIABLE_productName:identifier___Presenter
+    private var viewController: ___VARIABLE_productName:identifier___ViewController?
+    private var completionHandler: (() -> Void)?
     
     // Uncomment in case of subclassing the NSObject
     /*override*/ init() {
@@ -37,23 +38,24 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         // View controller setup
         let storyboard = UIStoryboard(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main)
         
-         if let storyboardController = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_productName:identifier___") as? ___VARIABLE_productName:identifier___ViewController {
+         if let storyboardController = storyboard.instantiateInitialViewController() as? ___VARIABLE_productName:identifier___ViewController {
             
             viewController = storyboardController
-            viewController?.container = self
             viewController?.delegate = presenter
             
+            viewController?.container = self // Retain module, pin to viewController
+            
             presenter.viewController = viewController
-
-            rootViewController = UINavigationController(rootViewController: storyboardController)
          }
     }
+    
 }
 
 extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___PresenterDelegate {
 
     func didClose() {
         completionHandler?()
+        viewController.container = nil // Release module
     }
 
 }

@@ -15,3 +15,7 @@ class ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:i
     weak var delegate: ___VARIABLE_productName:identifier___InteractorDelegate?
     
 }
+
+extension ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___InteractorActions {
+    
+}

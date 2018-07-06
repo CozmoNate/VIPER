@@ -17,12 +17,15 @@ class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:id
     weak var interactor: ___VARIABLE_productName:identifier___InteractorActions?
     weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions?
 
+}
+
+extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterActions {
+
+    // Presenter methods used by interactor
+    
     func reloadData() {
         // Update view controller
     }
-    
-    // Presenter methods used by interactor
-    
 }
 
 extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___InteractorDelegate {

@@ -42,3 +42,7 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController, ___
     }
 
 }
+
+extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewControllerActions {
+    
+}

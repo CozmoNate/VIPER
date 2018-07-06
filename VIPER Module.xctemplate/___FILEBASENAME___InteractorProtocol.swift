@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___InteractorProtocol: ___VARIABLE_productName:identifier___InteractorActions {
+protocol ___VARIABLE_productName:identifier___InteractorProtocol {
 
     weak var delegate: ___VARIABLE_productName:identifier___InteractorDelegate? { get set }
     

@@ -15,4 +15,3 @@ protocol ___VARIABLE_productName:identifier___ModuleProtocol: class {
     var rootViewController: UIViewController? { get }
     
 }
-
