@@ -17,7 +17,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
     
     private var interactor: ___VARIABLE_productName:identifier___Interactor
     private var presenter: ___VARIABLE_productName:identifier___Presenter
-    private var viewController: ___VARIABLE_productName:identifier___ViewController?
+    private weak var viewController: ___VARIABLE_productName:identifier___ViewController?
     private var completionHandler: (() -> Void)?
     
     // Uncomment in case of subclassing the NSObject
@@ -43,8 +43,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
             
             viewController = storyboardController
             viewController?.delegate = presenter
-            
-            viewController?.container = self // Retain module, pin to viewController
+            viewController?.container = self
             
             presenter.viewController = viewController
          }
@@ -56,7 +55,6 @@ extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:i
 
     func didClose() {
         completionHandler?()
-        viewController.container = nil // Release module
     }
 
 }
