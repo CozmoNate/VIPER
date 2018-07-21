@@ -4,7 +4,9 @@
 
 Go to folder in Finder: ~/Library/Developer/Xcode/Templates
 
-Create folder if not exists and put template there
+Create folder if not exists and put templates there
+
+Difference between managed and regualar version: Managed module is better suitable for factory instatiation
 
 ## Credits:
 

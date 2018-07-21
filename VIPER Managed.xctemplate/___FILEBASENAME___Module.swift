@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Container {
+class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Initiator, ___VARIABLE_productName:identifier___Container {
     
     var rootViewController: UIViewController? {
         return viewController
@@ -22,8 +22,13 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
     private var completionHandler: (() -> Void)?
     
     // Uncomment in case of subclassing the NSObject
-    /*override*/ init(completion: (() -> Void)?) {
-        
+    /*override*/ init() {
+
+        // Initialize dependencies, but don't start module
+    }
+
+    func start(completion: (() -> Void)? = nil) -> UIViewController? {
+
         interactor = ___VARIABLE_productName:identifier___Interactor()
         presenter = ___VARIABLE_productName:identifier___Presenter()
 
@@ -36,7 +41,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         completionHandler = completion
 
         //super.init() // In case of subclassing NSObject
-
+        
         // Interactor setup
         interactor?.delegate = presenter
 
@@ -49,6 +54,8 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         // View controller setup
         viewController?.delegate = presenter
         viewController?.container = self
+
+        return rootViewController
     }
     
 }
