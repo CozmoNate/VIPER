@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-protocol ___VARIABLE_productName:identifier___Initiator: class {
+protocol ___VARIABLE_productName:identifier___Initiator {
 
     func start(completion: (() -> Void)?) -> UIViewController?
 }

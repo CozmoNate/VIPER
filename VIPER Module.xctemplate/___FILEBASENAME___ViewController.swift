@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class ___VARIABLE_productName:identifier___ViewController {
+class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 
 	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
     
