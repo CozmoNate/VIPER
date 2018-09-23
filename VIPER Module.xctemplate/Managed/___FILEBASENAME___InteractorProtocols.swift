@@ -9,20 +9,19 @@
 import Foundation
 
 
-protocol ___VARIABLE_productName:identifier___DataSource: class {
+protocol ___VARIABLE_productName:identifier___DataSource: AnyObject {
     
     // Data provider methods utilized by presenter
     
 }
 
-
-protocol ___VARIABLE_productName:identifier___Interaction: class {
+protocol ___VARIABLE_productName:identifier___Interaction: AnyObject {
     
-    // Interactor methods utilized by presenter
+    // Interactor actions utilized by presenter
     
 }
 
-protocol ___VARIABLE_productName:identifier___InteractorDelegate: class {
+protocol ___VARIABLE_productName:identifier___Notification: AnyObject {
     
     // Interactor events utilized by presenter
     

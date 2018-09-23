@@ -11,7 +11,7 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Container {
     
-    private(set) var rootViewController: UIViewController?
+    private(set) weak var rootViewController: UIViewController?
     
     private var interactor: ___VARIABLE_productName:identifier___Interactor?
     private var presenter: ___VARIABLE_productName:identifier___Presenter?
@@ -37,12 +37,12 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         //super.init() // In case of subclassing NSObject
 
         // Assemble module
-        interactor?.delegate = presenter
+        interactor?.observer = presenter
         presenter?.delegate = self
         presenter?.dataSource = interactor
         presenter?.interactor = interactor
         presenter?.viewController = viewController
-        viewController?.delegate = presenter
+        viewController?.listener = presenter
         viewController?.container = self
 
         // Actual containing view controller can be different from module controllers instantiated from storyboards
@@ -51,7 +51,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
     
 }
 
-extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___PresenterDelegate {
+extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Delegate {
 
     func didClose() {
         completionHandler?()

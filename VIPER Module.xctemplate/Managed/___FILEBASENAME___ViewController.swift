@@ -6,13 +6,12 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 
-	weak var delegate: ___VARIABLE_productName:identifier___ViewControllerDelegate?
+	weak var listener: ___VARIABLE_productName:identifier___ViewEvents?
     
     var container:  ___VARIABLE_productName:identifier___Container?
 
@@ -20,19 +19,18 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        delegate?.viewDidLoad()
+        listener?.viewDidLoad()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         if isBeingDismissed || isMovingFromParentViewController {
-            delegate?.viewDidClose()
+            listener?.viewDidClose()
         }
         // Check root view controller being dismissed
         else if let r = container?.rootViewController, r.isBeingDismissed || r.isMovingFromParentViewController {
-            delegate?.viewDidClose()
+            listener?.viewDidClose()
         }
     }
     
@@ -43,6 +41,12 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 
 }
 
-extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewControllerActions {
+extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewActions {
     
+    func update() {
+        DispatchQueue.main.async {
+            // Update UI
+        }
+    }
+
 }

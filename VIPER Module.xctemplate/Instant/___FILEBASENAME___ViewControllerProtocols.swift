@@ -6,16 +6,17 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-protocol ___VARIABLE_productName:identifier___ViewControllerActions: class {
+protocol ___VARIABLE_productName:identifier___ViewActions: AnyObject {
     
-    // View controller methods updating views and utilized by presenter
+     // Update UI
+    func update()
     
 }
 
-protocol ___VARIABLE_productName:identifier___ViewControllerDelegate: class {
+protocol ___VARIABLE_productName:identifier___ViewEvents: AnyObject {
     
     /// ViewController loaded
     func viewDidLoad()

@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import UIKit
 
 
 class ___VARIABLE_productName:identifier___Interactor {
 
-    weak var delegate: ___VARIABLE_productName:identifier___InteractorDelegate?
+    // Notify observer about changes come from services or when the actions is completed
+    weak var observer: ___VARIABLE_productName:identifier___Notification?
     
 }
 

@@ -6,32 +6,29 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
 class ___VARIABLE_productName:identifier___Presenter {
 
-    weak var delegate: ___VARIABLE_productName:identifier___PresenterDelegate?
+    weak var delegate: ___VARIABLE_productName:identifier___Delegate?
+    
     weak var dataSource: ___VARIABLE_productName:identifier___DataSource?
     weak var interactor: ___VARIABLE_productName:identifier___Interaction?
-    weak var viewController: ___VARIABLE_productName:identifier___ViewControllerActions?
+    weak var viewController: ___VARIABLE_productName:identifier___ViewActions?
 
-}
-
-extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterActions {
-
-    // Presenter methods used by interactor
-    
     func reloadData() {
         // Update view controller
+        viewController?.update()
     }
+
 }
 
-extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___InteractorDelegate {
+extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___Notification {
     
 }
-extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___ViewControllerDelegate {
+
+extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___ViewEvents {
     
     func viewDidLoad() {
         reloadData() // Reload data the first time

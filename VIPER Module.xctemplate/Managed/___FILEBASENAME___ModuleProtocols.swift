@@ -6,10 +6,10 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
+// In some cases you will need to factorize the module. Use factory that produces object conforming to Initiator protocol
 protocol ___VARIABLE_productName:identifier___Initiator {
 
     func start(with provisioning: ___VARIABLE_productName:identifier___Provisioning, completion: (() -> Void)?) -> UIViewController?
@@ -18,11 +18,11 @@ protocol ___VARIABLE_productName:identifier___Initiator {
 extension ___VARIABLE_productName:identifier___Initiator {
 
     func start(with provisioning: ___VARIABLE_productName:identifier___Provisioning) -> UIViewController? {
-        return self.start(with: provisioning, completion: nil)
+        return start(with: provisioning, completion: nil)
     }
 }
 
-protocol ___VARIABLE_productName:identifier___Container: class {
+protocol ___VARIABLE_productName:identifier___Container: AnyObject {
     
     var rootViewController: UIViewController? { get }
     

@@ -6,11 +6,10 @@
 //  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
-protocol ___VARIABLE_productName:identifier___Container: class {
+protocol ___VARIABLE_productName:identifier___Container: AnyObject {
     
     var rootViewController: UIViewController? { get }
     
