@@ -16,7 +16,7 @@ protocol ___VARIABLE_productName:identifier___DataSource: class {
 }
 
 
-protocol ___VARIABLE_productName:identifier___InteractorActions: class {
+protocol ___VARIABLE_productName:identifier___Interaction: class {
     
     // Interactor methods utilized by presenter
     

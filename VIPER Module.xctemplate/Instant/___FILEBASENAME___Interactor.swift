@@ -20,6 +20,6 @@ extension ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productNa
     
 }
 
-extension ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___InteractorActions {
+extension ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___Interaction {
     
 }
