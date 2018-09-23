@@ -11,49 +11,49 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Initiator, ___VARIABLE_productName:identifier___Container {
     
-    var rootViewController: UIViewController? {
-        return viewController
-    }
+    private(set) var rootViewController: UIViewController?
     
     private var interactor: ___VARIABLE_productName:identifier___Interactor?
     private var presenter: ___VARIABLE_productName:identifier___Presenter?
     private weak var viewController: ___VARIABLE_productName:identifier___ViewController?
 
+    private var configuration: ___VARIABLE_productName:identifier___Configuration
     private var completionHandler: (() -> Void)?
     
     // Uncomment in case of subclassing the NSObject
-    /*override*/ init() {
+    /*override*/ init(configuration: ___VARIABLE_productName:identifier___Configuration) {
+
+        //super.init() // In case of subclassing NSObject
 
         // Initialize dependencies, but don't start module
+        self.configuration = configuration
     }
 
-    func start(completion: (() -> Void)? = nil) -> UIViewController? {
-
-        interactor = ___VARIABLE_productName:identifier___Interactor()
-        presenter = ___VARIABLE_productName:identifier___Presenter()
+    func start(with provisioning: ___VARIABLE_productName:identifier___Provisioning, completion: (() -> Void)? = nil) -> UIViewController? {
 
         let storyboard = UIStoryboard(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main)
 
-        if let storyboardController = storyboard.instantiateInitialViewController() as? ___VARIABLE_productName:identifier___ViewController {
-            viewController = storyboardController
+        guard let storyboardController = storyboard.instantiateInitialViewController() as? ___VARIABLE_productName:identifier___ViewController else {
+            return nil
         }
 
+        // Init components using stored configuration and provided provisioning data
+        interactor = ___VARIABLE_productName:identifier___Interactor()
+        presenter = ___VARIABLE_productName:identifier___Presenter()
+        viewController = storyboardController
         completionHandler = completion
 
-        //super.init() // In case of subclassing NSObject
-        
-        // Interactor setup
+        // Assemble module
         interactor?.delegate = presenter
-
-        // Presenter setup
         presenter?.delegate = self
         presenter?.dataSource = interactor
         presenter?.interactor = interactor
         presenter?.viewController = viewController
-
-        // View controller setup
         viewController?.delegate = presenter
         viewController?.container = self
+
+        // Actual containing view controller can be different from module controllers instantiated from storyboards
+        rootViewController = viewController
 
         return rootViewController
     }

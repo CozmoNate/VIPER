@@ -12,13 +12,13 @@ import UIKit
 
 protocol ___VARIABLE_productName:identifier___Initiator {
 
-    func start(completion: (() -> Void)?) -> UIViewController?
+    func start(with provisioning: ___VARIABLE_productName:identifier___Provisioning, completion: (() -> Void)?) -> UIViewController?
 }
 
 extension ___VARIABLE_productName:identifier___Initiator {
 
-    func start() -> UIViewController? {
-        return self.start(completion: nil)
+    func start(with provisioning: ___VARIABLE_productName:identifier___Provisioning) -> UIViewController? {
+        return self.start(with: provisioning, completion: nil)
     }
 }
 
