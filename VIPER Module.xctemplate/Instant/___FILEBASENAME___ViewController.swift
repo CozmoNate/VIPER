@@ -44,9 +44,7 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewActions {
     
     func update() {
-        DispatchQueue.main.async {
-            // Update UI
-        }
+        // Update UI
     }
 
 }

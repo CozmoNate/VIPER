@@ -18,8 +18,10 @@ class ___VARIABLE_productName:identifier___Presenter {
     weak var viewController: ___VARIABLE_productName:identifier___ViewActions?
 
     func reloadData() {
-        // Update view controller
-        viewController?.update()
+        // Update view controller, always on main thread
+        DispatchQueue.main.async {
+            self.viewController?.update()
+        }
     }
 
 }
