@@ -9,8 +9,14 @@
 import UIKit
 
 
-protocol ___VARIABLE_productName:identifier___Delegate: AnyObject {
+protocol ___VARIABLE_productName:identifier___Events: AnyObject {
 
     func didClose()
+
+}
+
+protocol ___VARIABLE_productName:identifier___Delegate: AnyObject {
+
+    // Add delegate requests there or remove it
 
 }

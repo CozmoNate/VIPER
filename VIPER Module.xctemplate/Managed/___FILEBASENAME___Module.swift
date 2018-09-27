@@ -46,6 +46,7 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         // Assemble module
         interactor?.observer = presenter
         presenter?.delegate = self
+        presenter?.listener = self
         presenter?.dataSource = interactor
         presenter?.interactor = interactor
         presenter?.viewController = viewController
@@ -55,15 +56,19 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
         // Actual containing view controller can be different from module controllers instantiated from storyboards
         rootViewController = viewController
 
-        return rootViewController
+        return self
     }
     
 }
 
-extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Delegate {
+extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Events {
 
     func didClose() {
         completionHandler?()
     }
+
+}
+
+extension ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:identifier___Delegate {
 
 }
