@@ -6,7 +6,7 @@ Go to folder in Finder: ~/Library/Developer/Xcode/Templates
 
 Create folder if not exists and put templates there
 
-Difference between managed and regualar version: Managed module is better suitable for factory instatiation
+Difference between managed and regualar version: Managed module built for delayed initiation. When you need to create instance of the module by a factory, give that instance to another app component and start it sometime later
 
 ## Credits:
 
