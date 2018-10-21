@@ -11,8 +11,9 @@ import UIKit
 
 class ___VARIABLE_productName:identifier___Presenter {
 
-    weak var delegate: ___VARIABLE_productName:identifier___Delegate?
+    weak var listener: ___VARIABLE_productName:identifier___Events?
 
+    weak var delegate: ___VARIABLE_productName:identifier___Delegate?
     weak var dataSource: ___VARIABLE_productName:identifier___DataSource?
     weak var interactor: ___VARIABLE_productName:identifier___Interaction?
     weak var viewController: ___VARIABLE_productName:identifier___ViewActions?
@@ -37,7 +38,7 @@ extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productNam
     }
     
     func viewDidClose() {
-        delegate?.didClose() // View controller dismissed
+        listener?.didClose() // View controller dismissed
     }
     
 }

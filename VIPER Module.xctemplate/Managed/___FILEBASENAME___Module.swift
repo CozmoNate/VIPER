@@ -45,8 +45,8 @@ class ___VARIABLE_productName:identifier___Module: ___VARIABLE_productName:ident
 
         // Assemble module
         interactor?.observer = presenter
-        presenter?.delegate = self
         presenter?.listener = self
+        presenter?.delegate = self
         presenter?.dataSource = interactor
         presenter?.interactor = interactor
         presenter?.viewController = viewController

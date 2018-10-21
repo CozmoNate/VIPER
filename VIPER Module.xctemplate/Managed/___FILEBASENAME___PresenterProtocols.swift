@@ -17,6 +17,6 @@ protocol ___VARIABLE_productName:identifier___Events: AnyObject {
 
 protocol ___VARIABLE_productName:identifier___Delegate: AnyObject {
 
-    // Add delegate requests there or remove it
+    // Add presenter's delegated actions here
 
 }
